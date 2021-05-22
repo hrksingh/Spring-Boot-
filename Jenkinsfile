@@ -5,6 +5,7 @@ pipeline {
     agent {
         docker {
             image "maven:3.8.1-adoptopenjdk-8"
+            label "master"
             args "-v /tmp/maven:/var/maven/.m2 -e MAVEN_CONFIG=/var/maven/.m2"
         }
     }
